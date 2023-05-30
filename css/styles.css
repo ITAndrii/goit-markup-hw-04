@@ -13,7 +13,9 @@
   --accent-color: #4d5ae5;
   --light-bg: #f4f4fd;
   --pressed-state: #404bbf;
-  --border-btn-color: #e7e9fc;
+  --border-btn-color: #030303;
+  --costumers-logo-color: #8e8f99;
+  --green-accent-color: #31d0aa;
 }
 
 h1,
@@ -127,6 +129,22 @@ body {
   color: var(--pressed-state);
 }
 
+.header-link::after {
+  width: 48px;
+  height: 4px;
+  display: inline-block;
+  background-size: contain;
+  border-radius: 2px;
+}
+
+.header-link:hover::after {
+  display: block;
+  content: "";
+  height: 4px;
+  width: 100%;
+  background-color: var(--pressed-state);
+}
+
 .contacts {
   font-family: inherit;
   font-style: normal;
@@ -220,15 +238,6 @@ body {
   gap: 24px;
 }
 
-/* .skill-item::before {
-  content: "";
-  display: inline-block;
-  width: 264px;
-  height: 112px;
-  border: 1px solid #2e2f42;
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-} */
-
 .skill-item {
   flex-basis: calc((100% - 3 * 24px) / 4);
   min-height: 104px;
@@ -245,15 +254,12 @@ body {
   margin-bottom: 8px;
 }
 
-.skill-item-icon {
-}
-
 .skill-title-item {
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
   letter-spacing: 0.02em;
-  color: var(--title-color);
+  color: currentColor;
   margin-bottom: 8px;
 }
 
@@ -302,6 +308,11 @@ body {
   border-radius: 0px 0px 4px 4px;
 }
 
+.team-item:hover {
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+}
+
 .team-title {
   font-weight: 700;
   font-size: 36px;
@@ -334,6 +345,76 @@ body {
   text-align: center;
   letter-spacing: 0.02em;
   color: var(--main-text-color);
+  margin-bottom: 8px;
+}
+
+.social-networks-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 24px;
+}
+
+.social-networks-link {
+  width: 40px;
+  height: 40px;
+  background-color: var(--accent-color);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-networks-icon {
+  fill: var(--main-bg);
+}
+
+.customers-title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+  color: var(--title-color);
+  text-align: center;
+  padding-top: 120px;
+  margin-bottom: 72px;
+}
+
+.customers-list {
+  display: flex;
+
+  align-items: flex-start;
+  padding-bottom: 120px;
+  gap: 24px;
+}
+.customers-item {
+  box-sizing: border-box;
+  border: 1px solid var(--costumers-logo-color);
+  border-radius: 4px;
+  width: calc((100%-24 * 5) / 6);
+  height: 88px;
+}
+
+.customers-link {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.customers-icon {
+  width: 104px;
+  height: 56px;
+  fill: var(--costumers-logo-color);
+}
+
+.customers-item:is(:hover, :focus) {
+  border-color: var(--pressed-state);
+}
+
+.customers-item:is(:hover, :focus) .customers-icon {
+  fill: var(--pressed-state);
 }
 
 /* Portfolio */
@@ -372,6 +453,7 @@ body {
   color: var(--main-bg);
   background: var(--pressed-state);
   border: 1px solid transparent;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
 .projects {
@@ -383,6 +465,11 @@ body {
 
 .projects-item {
   width: calc((100% - 48px) / 3);
+}
+
+.projects-item:hover {
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 .projects-description {
@@ -414,6 +501,10 @@ body {
   padding-bottom: 100px;
 }
 
+.footer-container {
+  display: flex;
+}
+
 .logo-footer {
   display: inline-block;
   margin-bottom: 16px;
@@ -435,4 +526,32 @@ body {
 
 .footer-logo-studio {
   color: var(--light-bg);
+}
+
+.footer-soc-media {
+  margin-left: 120px;
+}
+
+.footer-soc-title {
+  display: inline-block;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #ffffff;
+  margin-bottom: 16px;
+}
+
+.social-footer-link {
+  width: 40px;
+  height: 40px;
+  background-color: var(--accent-color);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.social-footer-link:is(:hover, :focus) {
+  background-color: var(--green-accent-color);
 }
