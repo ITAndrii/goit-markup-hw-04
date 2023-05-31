@@ -57,11 +57,11 @@ body {
   display: flex;
   justify-content: space-between;
   border-bottom: 1px solid var(--border-btn-color);
-  box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
-    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
 .header-page {
+  box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
 .header-nav {
@@ -350,6 +350,7 @@ body {
   text-align: center;
   letter-spacing: 0.02em;
   color: var(--main-text-color);
+  margin-bottom: 8px;
 }
 
 .team-soc-list {
@@ -426,7 +427,7 @@ body {
 }
 
 .customers-link:is(:hover, :focus) .customers-icon {
-  fill: var(--pressed-state);
+  color: var(--pressed-state);
 }
 
 /* Portfolio */
