@@ -376,8 +376,12 @@ body {
   justify-content: center;
 }
 
+.team-soc-link:is(:hover, :focus) {
+  background-color: var(--pressed-state);
+}
+
 .social-networks-icon {
-  fill: var(--main-bg);
+  fill: var(--light-bg);
 }
 
 .customers-section {
@@ -417,16 +421,27 @@ body {
   justify-content: center;
   align-items: center;
   color: var(--costumers-logo-color);
+  fill: var(--costumers-logo-color);
 }
 .customers-icon {
   fill: currentColor;
 }
 
-.customers-link:is(:hover, :focus) {
+.customers-link:hover {
   border-color: var(--pressed-state);
 }
 
-.customers-link:is(:hover, :focus) .customers-icon {
+.customers-link:hover,
+.customers-icon {
+  color: var(--pressed-state);
+}
+
+.customers-link:focus {
+  border-color: var(--pressed-state);
+}
+
+.customers-link:focus,
+.customers-icon {
   color: var(--pressed-state);
 }
 
@@ -462,7 +477,15 @@ body {
   border-radius: 4px;
 }
 
-.filter-btn-item:is(:hover, :focus) {
+.filter-btn-item:hover {
+  color: var(--main-bg);
+  background: var(--pressed-state);
+  border: 1px solid transparent;
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+
+.filter-btn-item:focus {
   color: var(--main-bg);
   background: var(--pressed-state);
   border: 1px solid transparent;
