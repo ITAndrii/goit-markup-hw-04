@@ -352,7 +352,7 @@ body {
   color: var(--main-text-color);
 }
 
-.social-networks-container {
+.team-soc-list {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -360,14 +360,19 @@ body {
   padding-bottom: 32px;
 }
 
-.social-networks-link {
+.team-soc-item {
   width: 40px;
   height: 40px;
+}
+
+.team-soc-link {
+  display: flex;
+  width: 100%;
+  height: 100%;
   background-color: var(--accent-color);
   border-radius: 50%;
-  display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
 }
 
 .social-networks-icon {
@@ -460,7 +465,8 @@ body {
   color: var(--main-bg);
   background: var(--pressed-state);
   border: 1px solid transparent;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .projects {
@@ -474,7 +480,16 @@ body {
   width: calc((100% - 48px) / 3);
 }
 
-.projects-item:hover {
+.projects-item-link {
+  display: block;
+}
+
+.projects-item:is(:hover, :focus) {
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+}
+
+.projects-item:is(:hover, :focus) .projects-item-link {
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
@@ -559,8 +574,6 @@ body {
 .footer-soc-list {
   display: flex;
   gap: 16px;
-  padding: 0;
-  margin: 0;
 }
 
 .footer-soc-item {
