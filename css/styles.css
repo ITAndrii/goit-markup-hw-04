@@ -16,6 +16,7 @@
   --border-btn-color: #030303;
   --costumers-logo-color: #8e8f99;
   --green-accent-color: #31d0aa;
+  --border-collor: #e7e9fc;
 }
 
 h1,
@@ -56,7 +57,7 @@ body {
 .navigation {
   display: flex;
   justify-content: space-between;
-  border-bottom: 1px solid var(--border-btn-color);
+  border-bottom: 1px solid var(--border-collor);
 }
 
 .header-page {
@@ -131,21 +132,21 @@ body {
   color: var(--pressed-state);
 }
 
-.header-link::after {
+/* .header-link::after {
   width: 48px;
   height: 4px;
   display: inline-block;
   background-size: contain;
   border-radius: 2px;
-}
+} */
 
-.header-link:hover::after {
+/* .header-link:hover::after {
   display: block;
   content: "";
   height: 4px;
   width: 100%;
   background-color: var(--pressed-state);
-}
+} */
 
 .contacts {
   font-family: inherit;
@@ -431,8 +432,7 @@ body {
   border-color: var(--pressed-state);
 }
 
-.customers-link:hover,
-.customers-icon {
+.customers-link:hover .customers-icon {
   color: var(--pressed-state);
 }
 
@@ -440,8 +440,7 @@ body {
   border-color: var(--pressed-state);
 }
 
-.customers-link:focus,
-.customers-icon {
+.customers-link:focus .customers-icon {
   color: var(--pressed-state);
 }
 
@@ -473,7 +472,7 @@ body {
   background: var(--light-bg);
   cursor: pointer;
   padding: 12px 24px;
-  border: 1px solid var(--border-btn-color);
+  border: 1px solid var(--border-collor);
   border-radius: 4px;
 }
 
@@ -529,7 +528,7 @@ body {
 }
 .projects-description {
   padding: 32px 16px;
-  border: 1px solid var(--border-btn-color);
+  border: 1px solid var(--border-collor);
   border-top: none;
 }
 
